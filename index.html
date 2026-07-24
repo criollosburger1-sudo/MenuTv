@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criollos Menu</title>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+</style>
+</head>
+<body>
+
+<img id="foto" src="IMG_0928.jpeg">
+
+<script>
+const imagenes = [
+  "IMG_0928.jpeg",
+  "IMG_0968.jpeg",
+  "IMG_0970.jpeg",
+  "IMG_0971.jpeg",
+  "IMG_0972.jpeg",
+  "IMG_0973.jpeg",
+  "IMG_0974.jpeg",
+  "IMG_0975.jpeg",
+  "IMG_0976.jpeg",
+  "IMG_0978.jpeg",
+  "IMG_0979.jpeg"
+];
+
+let i = 0;
+const foto = document.getElementById("foto");
+
+setInterval(() => {
+    i = (i + 1) % imagenes.length;
+    foto.src = imagenes[i];
+}, 5000);
+</script>
+
+</body>
+</html>
